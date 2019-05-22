@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="1008.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.VoleyEventController">
+  <tabs>
+    <Tab text="Tab 1">
+      <content>
+        <AnchorPane fx:id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="1024.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="133.0" layoutX="11.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="495.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="421.0" layoutX="512.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="490.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="133.0" layoutX="11.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" width="495.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="133.0" layoutX="14.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="495.0" />
+                  <Label layoutX="415.0" text="Banner">
+                     <font>
+                        <Font name="Berlin Sans FB" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="83.0" prefHeight="29.0" prefWidth="143.0" text="Cargar datos">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="228.0" prefHeight="29.0" prefWidth="216.0" text="Buscar espectadores">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="374.0" prefHeight="29.0" prefWidth="214.0" text="Buscar participante">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="519.0" layoutY="83.0" prefHeight="29.0" prefWidth="105.0" text="Ver Datos">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="loadedCorrectly" layoutX="17.0" layoutY="170.0" prefHeight="29.0" prefWidth="488.0" text="  Los posibles asistentes alevento han sido cargados exitosamente" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="route" editable="false" layoutX="25.0" layoutY="120.0" prefHeight="31.0" prefWidth="236.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="279.0" layoutY="121.0" mnemonicParsing="false" onAction="#explore" text="Explorar">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cargar" layoutX="393.0" layoutY="121.0" mnemonicParsing="false" onAction="#load" text="Cargar">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="idToSearchSpectator" layoutX="66.0" layoutY="261.0" prefHeight="31.0" prefWidth="195.0" />
+                  <Label layoutX="37.0" layoutY="261.0" prefHeight="29.0" prefWidth="23.0" text="Id">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="noSpectatorWasFound" layoutX="17.0" layoutY="317.0" prefHeight="29.0" prefWidth="488.0" text="  No se encontró el espectador con el id: " textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeSpectators" layoutX="377.0" layoutY="261.0" prefHeight="29.0" prefWidth="119.0" text="Tiempo: " textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="279.0" layoutY="258.0" mnemonicParsing="false" onAction="#lookForSpectators" text="Buscar">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="idToSearchParticipant" layoutX="67.0" layoutY="406.0" prefHeight="31.0" prefWidth="195.0" />
+                  <Label layoutX="38.0" layoutY="406.0" prefHeight="29.0" prefWidth="23.0" text="Id">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="noParticipantWasFound" layoutX="18.0" layoutY="462.0" prefHeight="29.0" prefWidth="488.0" text="  No se encontró el participante con el id: " textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeParticipant" layoutX="378.0" layoutY="406.0" prefHeight="29.0" prefWidth="119.0" text="Tiempo: " textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="280.0" layoutY="403.0" mnemonicParsing="false" onAction="#searchParticipant" text="Buscar">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="id" layoutX="540.0" layoutY="241.0" prefHeight="29.0" prefWidth="450.0" text="Id:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="first_name" layoutX="540.0" layoutY="271.0" prefHeight="30.0" prefWidth="450.0" text="First name:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="last_name" layoutX="540.0" layoutY="301.0" prefHeight="29.0" prefWidth="450.0" text="Last name:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="email" layoutX="540.0" layoutY="331.0" prefHeight="29.0" prefWidth="450.0" text="Email:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gender" layoutX="540.0" layoutY="361.0" prefHeight="29.0" prefWidth="450.0" text="Gender:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="country" layoutX="540.0" layoutY="391.0" prefHeight="29.0" prefWidth="450.0" text="Country:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="birthday" layoutX="540.0" layoutY="421.0" prefHeight="29.0" prefWidth="450.0" text="Birthday:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="image" fitHeight="78.0" fitWidth="75.0" layoutX="720.0" layoutY="118.0">
+                     <image>
+                        <Image url="@../../imgs/blank.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Tab 2">
+      <content>
+        <AnchorPane fx:id="anchorPane2" minHeight="0.0" minWidth="0.0" prefHeight="545.0" prefWidth="1016.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="66.0" layoutX="14.0" layoutY="436.0" stroke="BLACK" strokeType="INSIDE" width="987.0" />
+                  <Label layoutX="96.0" layoutY="455.0" prefHeight="29.0" prefWidth="143.0" text="Opciones">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="407.0" layoutX="14.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="988.0" />
+                  <Button layoutX="508.0" layoutY="451.0" mnemonicParsing="false" onAction="#paintSpectators" text="Espectadores">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="321.0" layoutY="452.0" mnemonicParsing="false" onAction="#paintParticipant" text="Participantes">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="25.0" layoutY="14.0" prefHeight="29.0" prefWidth="186.0" text="Pintar estructura">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="participant" fitHeight="90.0" fitWidth="90.0" layoutX="44.0" layoutY="117.0">
+                     <image>
+                        <Image url="@../../imgs/blank.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="showsId" layoutX="44.0" layoutY="218.0" prefHeight="55.0" prefWidth="214.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
